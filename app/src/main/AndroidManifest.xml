@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Required permissions -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        tools:targetApi="s">
+
+        <!-- Launcher activity -->
+        <activity
+            android:name="VoskActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- New Analysis screen -->
+        <activity
+            android:name=".AnalysisActivity"
+            android:label="Transcript Analyzer" />
+
+    </application>
+</manifest>
